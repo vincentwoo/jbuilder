@@ -54,7 +54,7 @@ class JbuilderTemplate < Jbuilder
 
   protected
     def _handle_partial_options(options)
-      options.reverse_merge!(:locals => {}, :handlers => [:jbuilder])
+      options.reverse_merge!(:locals => {}, :handlers => [:jbuilder], :formats => [:json])
       collection = options.delete(:collection)
       as = options[:as]
 
